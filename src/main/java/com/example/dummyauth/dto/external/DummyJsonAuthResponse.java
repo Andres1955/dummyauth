@@ -6,10 +6,9 @@ public record DummyJsonAuthResponse(
         int id,
         String username,
         String email,
-        String firstName,
-        String lastName,
+        @JsonProperty("firstName") String firstName,
+        @JsonProperty("lastName") String lastName,
         String gender,
         String image,
-        String token
-) {
-}
+        @JsonProperty("accessToken") String token
+) {}
